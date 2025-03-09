@@ -61,9 +61,9 @@ The admin has there own frontend implemented in Angular2, which communicates wit
 
 ## Deployment Steps on Docker:
 ###### Download application
-```
+````
 git clone https://github.com/hendisantika/online-banking.git
-```
+````
 ###### Start MySQL Docker Container
 ```
 docker run --detach --name=bankmysql --env="MYSQL_ROOT_PASSWORD=root" -p 3306:3306 mysql:8

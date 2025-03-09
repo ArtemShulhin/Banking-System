@@ -12,7 +12,7 @@ There are two roles user and admin.
 
 __Clone the repository__
 ```
-git clone https://github.com/hendisantika/Online-banking-angular-springboot-mysql 
+git clone https://github.com/ArtemShulhin/Banking-System.git
 ```
 
 __Go the folder__
@@ -62,7 +62,7 @@ The admin has there own frontend implemented in Angular2, which communicates wit
 ## Deployment Steps on Docker:
 ###### Download application
 ````
-git clone https://github.com/hendisantika/online-banking.git
+git clone https://github.com/ArtemShulhin/Banking-System.git
 ````
 ###### Start MySQL Docker Container
 ```
@@ -98,7 +98,7 @@ docker build -t hendisantika/online-banking:latest .
 sudo chmod 777 /var/run/docker.sock && \
 mkdir -p /jenkins_bkp/jenkins_home && \
 chmod -R 777 /jenkins_bkp && \
-git clone https://github.com/hendisantika/online-banking.git && \
+git clone https://github.com/ArtemShulhin/Banking-System.git && \
 cd online-bank && \
 git checkout master && \
 cp Dockerfile-Jenkins-Maven ../Dockerfile && \
@@ -110,7 +110,7 @@ docker build -t hendisantika/jenkins-maven-docker:v0.1 .
 docker run --detach -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):$(which docker) -p 9080:8080 -p 50000:50000 -v /jenkins_bkp/jenkins_home:/var/jenkins_home hendisantika/jenkins-maven-docker:v0.1
 ```
 ###### Setup "online-banking" project in Jenkins:
- * Login to Jenkins and setup a pipeline project with source code from [Link to OnlineBank GIT repo!](https://github.com/hendisantika/online-banking.git)
+ * Login to Jenkins and setup a pipeline project with source code from [Link to OnlineBank GIT repo!](https://github.com/ArtemShulhin/Banking-System.git)
  * Run the job to build and deploy the application
 
 ###### Debug H2 DB while testing
